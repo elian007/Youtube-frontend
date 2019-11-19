@@ -2,6 +2,7 @@ header#main-header {
     background: #fff;
     height: 72px;
     border-bottom: 1px solid #DDD;
+    
 }
 
 header#main-header .header-content{
@@ -9,12 +10,21 @@ header#main-header .header-content{
     max-width: 980px;
     margin: 0;
     height: 72px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 header#main-header .header-content .img2{
-    margin-right: -40px;
+    width: 3em;
+    margin-right: 380px;
+}
+
+header#main-header .header-content input{
+    float: right;
+    padding: 6px;
+    border: 1px solid;
+    margin-top: 8px;
+    margin-right: -60px;
+    font-size: 17px;
 }

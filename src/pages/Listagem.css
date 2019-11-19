@@ -3,12 +3,24 @@ section#lista-video{
     max-width: 800px;
     margin: 0 auto;
     padding: 0 30px;
+/*
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center; */
 }
 
 section#lista-video article{
+   /* width: 50%;
+    height: 550px; */
     background: #FFF;
     border: 1px solid #DDD;
     margin-top: 30px;
+
+    
+   
+    
 }
 
 section#lista-video article header{
@@ -26,7 +38,6 @@ section#lista-video article header .video-info{
 
 section#lista-video article header .video-info span{
     font-size: 20px;
-    
 }
 
 section#lista-video article > Player {
@@ -45,15 +56,18 @@ section#lista-video article footer .acoes button{
     background: transparent;
     border: 0;
     cursor: pointer;
+    
 }
 
-section#lista-video article footer .acoes video{
-    height: 20px;
+section#lista-video article footer .acoes img{
+    height: 30px;
+    margin-right: 50px;
+    
 }
 
 section#lista-video article footer p{
-    font-size: 18px;
-    margin-top: 2px;
+    font-size: 20px;
+    margin-top: 1px;
     padding: 5px;
     line-height: 18px;
 }
