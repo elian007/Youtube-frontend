@@ -1,0 +1,20 @@
+header#main-header {
+    background: #fff;
+    height: 72px;
+    border-bottom: 1px solid #DDD;
+}
+
+header#main-header .header-content{
+    width: 100%;
+    max-width: 980px;
+    margin: 0;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header#main-header .header-content .img2{
+    margin-right: -40px;
+}
