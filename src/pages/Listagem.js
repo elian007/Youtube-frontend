@@ -5,9 +5,8 @@ import api from '../services/api'
 
 import './Listagem.css'
 
-import more from '../assets/more.svg'
 import like from '../assets/like.svg'
-
+import deslike from '../assets/deslike.svg'
 
 
 class Listagem extends Component{
@@ -25,7 +24,7 @@ class Listagem extends Component{
     }
     
     registerToSocket = () => {
-        const socket = io('http://localhost:3030')
+        const socket = io(process.env.REACT_APP_API_URL)
 
         socket.on('video', novoVideo => {
             this.setState({ listaVideos: [novoVideo, ...this.state.listaVideos]})
@@ -38,10 +37,21 @@ class Listagem extends Component{
                 )
             })
         })
+
+        socket.on('descurtida', novaDescurtida => {
+            this.setState({ 
+                listaVideos: this.state.listaVideos.map(film =>
+                    film._id === novaDescurtida._id ? novaDescurtida : film
+                )
+            })
+        })
     }
 
     handleCurtida = id => {
         api.post(`/videos/${id}/curtida`)
+    }
+    handleDescurtida = id => {
+        api.post(`/videos/${id}/descurtida`)
     }
 
     render(){
@@ -59,8 +69,6 @@ class Listagem extends Component{
                             </strong>
                         </div>
 
-                        <img src={more} alt='Mais' />
-
                     </header>
                         
                     <Player src={`http://localhost:3030/files/${film.video}`}>
@@ -68,17 +76,27 @@ class Listagem extends Component{
                     </Player>
 
                     <footer>
-                        <div className='acoes'>
-                            <button type='button' onClick={() => this.handleCurtida(film._id)}>
-                                <img src={like} alt='Curtidas' />
-                            </button>
-                        </div>
-
-                        <strong>{film.curtidas} curtidas</strong>
+                        
                             <p>
                                 {film.descricao}
                                 <span>{film.hashtags}</span>
                             </p>
+                            <br/>
+                        <div className='acoes'>
+                            <button type='button' onClick={() => this.handleCurtida(film._id)}>
+                                <img src={like} alt='Curtidas' />
+                            </button>
+                            <button type='button' onClick={() => this.handleDescurtida(film._id)}>
+                                <img src={deslike} alt='Descurtidas' />
+                            </button>
+                        </div>
+                        
+                        <strong>
+                            {film.curtidas} gostei 
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            {film.descurtidas} não gostei
+                        </strong>
+                            
                     </footer>
                 </article>
                 ))}
