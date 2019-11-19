@@ -71,7 +71,7 @@ class Listagem extends Component{
 
                     </header>
                         
-                    <Player src={`http://localhost:3030/files/${film.video}`}>
+                    <Player src={`${process.env.REACT_APP_API_URL}/files/${film.video}`}>
                             <ControlBar autoHide={false} className="my-class" />
                     </Player>
 
