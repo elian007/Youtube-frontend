@@ -71,7 +71,7 @@ class Listagem extends Component{
                     </header>
                     
                     <video width="" height="400" controls>
-                         <source src={`${process.env.REACT_APP_API_URL}/files/${film.video}`} accept="video/mp4" type="video/mp4" />
+                         <source src={`${process.env.REACT_APP_API_URL}/files/${film.video}`} type="video/mp4" />
            
                         </video>
                     
