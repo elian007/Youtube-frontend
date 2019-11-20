@@ -40,7 +40,7 @@ section#lista-video article header .video-info span{
     font-size: 20px;
 }
 
-section#lista-video article > Player {
+section#lista-video article > video {
     width: 100%;
 }
 
