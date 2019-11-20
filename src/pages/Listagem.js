@@ -72,7 +72,7 @@ class Listagem extends Component{
                     </header>
                     
                     <video width="320" height="240" controls>
-                         <source src="https://wwww.gustavomota.com.br/video/4.mp4" type="video/mp4" />
+                         <source src="https://www.gustavomota.com.br/video/4.mp4" type="video/mp4" />
            
                         </video>
                     
