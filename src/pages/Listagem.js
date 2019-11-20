@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Player, ControlBar } from 'video-react';
 import io from 'socket.io-client'
 import api from '../services/api'
 
