@@ -70,10 +70,12 @@ class Listagem extends Component{
                         </div>
 
                     </header>
-                        
-                    <Player src={`${process.env.REACT_APP_API_URL}/files/${film.video}`}>
-                            <ControlBar autoHide={false} className="my-class" />
-                    </Player>
+                    
+                    <video width="320" height="240" controls>
+                         <source src="https://wwww.gustavomota.com.br/video/4.mp4" type="video/mp4" />
+           
+                        </video>
+                    
 
                     <footer>
                         
