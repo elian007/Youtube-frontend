@@ -16,7 +16,7 @@ export default function Header() {
             <Link to='/upload'>
                 <span><img src={upload} className='img2' alt='Uplaod de vídeos'/></span>
             </Link>
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search" />
+            <input className="form-control" type="text" placeholder="Search" aria-label="Search" />
         </div>
     </header>
   );
