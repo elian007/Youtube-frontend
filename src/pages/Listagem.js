@@ -55,7 +55,7 @@ class Listagem extends Component{
     }
 
     render(){
-
+       
         return(
             <section id='lista-video'>
                 { this.state.listaVideos.map(film => (
@@ -72,7 +72,7 @@ class Listagem extends Component{
                     </header>
                     
                     <video width="" height="400" controls>
-                         <source src="https://www.gustavomota.com.br/video/4.mp4" type="video/mp4" />
+                         <source src={`${REACT_APP_API_URL}/files/${film._id}`} type="video/mp4" />
            
                         </video>
                     
