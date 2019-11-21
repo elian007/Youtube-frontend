@@ -39,7 +39,7 @@ class Upload extends Component{
         return(
             <form id='novo-video' onSubmit={this.handleSubmit}>
                 
-                <input type='file' onChange={this.handleVideoChange} />
+                <input type='file' accept="video/mp4" onChange={this.handleVideoChange} />
 
                 <input 
                     type='text'

@@ -2,32 +2,28 @@ import React, { Component } from 'react'
 import io from 'socket.io-client'
 import api from '../services/api'
 
-import './Listagem.css'
+import './Pesquisar.css'
 
 import like from '../assets/like.svg'
 import deslike from '../assets/deslike.svg'
 
 
-class Listagem extends Component{
+class Pesquisar extends Component{
 
     state = {
-        listaVideos: [],
+        video: [],
     }
 
     async componentDidMount() {
         this.registerToSocket()
 
-        const response = await api.get('videos')
+        const response = await api.get('pesquisa')
 
-        this.setState({ listaVideos: response.data})
+        this.setState({ video: response.data})
     }
     
     registerToSocket = () => {
         const socket = io(process.env.REACT_APP_API_URL)
-
-        socket.on('video', novoVideo => {
-            this.setState({ listaVideos: [novoVideo, ...this.state.listaVideos]})
-        })
 
         socket.on('curtida', novaCurtida => {
             this.setState({ 
@@ -57,7 +53,7 @@ class Listagem extends Component{
        
         return(
             <section id='lista-video'>
-                { this.state.listaVideos.map(film => (
+                { this.state.video.map(film => (
                     <article key={film.id}>
                     <header>
                         <div className='video-info'>
@@ -107,4 +103,4 @@ class Listagem extends Component{
     }
 }
 
-export default Listagem
+export default Pesquisar
