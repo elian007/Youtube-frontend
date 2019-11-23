@@ -2,7 +2,7 @@ header#main-header {
     background: #fff;
     height: 72px;
     border-bottom: 1px solid #DDD;
-    
+    width: 85.3em;
 }
 
 header#main-header .header-content{
@@ -17,14 +17,35 @@ header#main-header .header-content{
 
 header#main-header .header-content .img2{
     width: 3em;
-    margin-right: 380px;
 }
 
 header#main-header .header-content input{
     float: right;
-    padding: 6px;
+    padding: 1px;
     border: 1px solid;
     margin-top: 8px;
-    margin-right: -60px;
+    margin-left: 0;
     font-size: 17px;
 }
+
+header#main-header .header-content input[type=text] {
+    margin-bottom: 10px;
+    height: 35px;
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+  
+  header#main-header .header-content button {
+    margin-left: -100px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 0;
+    background: black;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
