@@ -18,7 +18,7 @@ export default function Header() {
                 <img src={logo} className='img1'alt='Videos' />
             </Link>
 
-            <input type='text' class='form-control' placeholder='Pesquisar vídeo...' />
+            <input name='pesquisar'type='text' class='form-control' placeholder='Pesquisar vídeo...' />
               <Link to='/pesquisa'>
                 <button type='submit' class='btn-btn-primary'>Enviar</button>
               </Link>
