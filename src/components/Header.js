@@ -16,13 +16,15 @@ export default function Header() {
             <Link to='/upload'>
                 <span><img src={upload} className='img2' alt='Uplaod de vídeos'/></span>
             </Link>
-            <Link to='/pesquisa'>
+            
             <form>
               <label>Pesquisar</label>
               <input type='text' class='form-control' placeholder='Pesquisar vídeo...' />
+              <Link to='/pesquisa'>
               <button type='submit' class='btn-btn-primary'>Enviar</button>
+              </Link>
             </form>
-            </Link>
+          
         </div>
     </header>
   );
