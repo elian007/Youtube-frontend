@@ -17,7 +17,7 @@ class Pesquisar extends Component{
     async componentDidMount() {
         this.registerToSocket()
 
-        const response = await api.get('pesquisa')
+        const response = await api.get('pesquisa/:value')
 
         this.setState({ video: response.data})
     }
