@@ -1,51 +1,34 @@
-header#main-header {
+nav {
     background: #fff;
     height: 72px;
     border-bottom: 1px solid #DDD;
-    width: 85.3em;
+    width: 81.45em;
+    background-image: linear-gradient(to right, white,black);
 }
 
-header#main-header .header-content{
+header{
     width: 100%;
-    max-width: 980px;
+    max-width: 1400px;
     margin: 0;
     height: 72px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    
 }
 
-header#main-header .header-content .img2{
+nav header div .img2{
+    margin-left: 3em;
     width: 3em;
 }
 
-header#main-header .header-content input{
-    float: right;
-    padding: 1px;
-    border: 1px solid;
-    margin-top: 8px;
-    margin-left: 0;
-    font-size: 17px;
+nav header div form{
+    margin-left: 40em;
 }
 
-header#main-header .header-content input[type=text] {
-    margin-bottom: 10px;
-    height: 35px;
-    width: 300px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    padding: 0 20px;
-    font-size: 14px;
-  }
+
+
+
+
+
   
-  header#main-header .header-content button {
-    margin-left: -100px;
-    padding: 10px 20px;
-    border-radius: 4px;
-    border: 0;
-    background: black;
-    color: #FFF;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-  }
+ 
