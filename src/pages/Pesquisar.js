@@ -6,18 +6,24 @@ import './Pesquisar.css'
 
 import like from '../assets/like.svg'
 import deslike from '../assets/deslike.svg'
+//import Header from '../components/Header'
+
+
 
 
 class Pesquisar extends Component{
+    
+    
 
     state = {
         video: [],
+        
     }
 
     async componentDidMount() {
         this.registerToSocket()
-
-        const response = await api.get('pesquisa/:value')
+        this.setState({consulta: 'ultimato'})
+        const response = await api.get(`pesquisa/:value`)
 
         this.setState({ video: response.data})
     }
