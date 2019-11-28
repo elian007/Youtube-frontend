@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import upload from '../assets/upload.svg'
 import './Header.css'
-//import api from '../services/api'
+import api from '../services/api'
+
 
 
 
@@ -27,14 +28,17 @@ export default class Header extends Component{
       handleSubmit = async e => {
         e.preventDefault()
         
-    
+        api.get(`/pesquisa/${e}`)
     }
-
+    
 
     render(){
+        
         return(
-
+            
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                                
+
                 <header>
                     <Link to='/'>
                         <img src={logo} className='img1'alt='Videos' />
@@ -59,8 +63,9 @@ export default class Header extends Component{
                        
                     </div>
                 </header>
+             
             </nav>
-            
+          
         )
     }
 }
