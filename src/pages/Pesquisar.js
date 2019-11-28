@@ -17,7 +17,7 @@ class Pesquisar extends Component{
 
     state = {
         video: [],
-        
+        consulta: ''
     }
 
     async componentDidMount() {
