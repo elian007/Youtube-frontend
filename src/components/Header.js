@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import upload from '../assets/upload.svg'
 import './Header.css'
-import api from '../services/api'
+//import api from '../services/api'
 
 
 
@@ -28,7 +28,8 @@ export default class Header extends Component{
       handleSubmit = async e => {
         e.preventDefault()
         
-        api.get(`/pesquisa/${e}`)
+        //api.get(`/pesquisa/${this.state.value}`)
+        window.location.href = `/pesquisa/${this.state.value}`
     }
     
 
@@ -52,13 +53,13 @@ export default class Header extends Component{
                         <form className="form-inline my-2 my-lg-0" onSubmit={this.handleSubmit}>
                             <input className="form-control mr-sm-2" type="search" 
                                 placeholder="Search" aria-label="Search" value={this.state.value}
-                                onChange={this.handleChange}/>
-                        <Link to= {`/pesquisa/${this.state.value}`}>
+                                onChange={this.handleChange} id= 'pesquisa' name='pesquisa'/>
+                    
                         <button className="btn btn-outline-success my-2 my-sm-0" 
                                  type="submit">
                                         Search
                         </button>
-                        </Link>
+                        
                 </form>
                        
                     </div>

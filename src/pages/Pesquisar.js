@@ -9,8 +9,6 @@ import deslike from '../assets/deslike.svg'
 //import Header from '../components/Header'
 
 
-
-
 class Pesquisar extends Component{
     
     
@@ -22,8 +20,10 @@ class Pesquisar extends Component{
 
     async componentDidMount() {
         this.registerToSocket()
-        this.setState({consulta: 'ultimato'})
-        const response = await api.get(`pesquisa/:value`)
+    
+        const value = this.props.match.params.value
+        
+        const response = await api.get(`pesquisa/${value}`)
 
         this.setState({ video: response.data})
     }

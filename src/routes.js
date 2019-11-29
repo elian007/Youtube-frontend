@@ -10,7 +10,7 @@ function Routes(){
         <Switch>
             <Route path='/' exact component={Listagem} />
             <Route path='/upload' component={Upload} />
-            <Route path='/pesquisa' component={Pesquisar} />
+            <Route path='/pesquisa/:value' component={Pesquisar} />
         </Switch>
     )
 }
