@@ -23,7 +23,7 @@ class Pesquisar extends Component{
     
         const value = this.props.match.params.value
         
-        const response = await api.get(`pesquisa/${value}`)
+        const response = await api.get(`videos/${value}`)
 
         this.setState({ video: response.data})
     }

@@ -6,8 +6,6 @@ import './Header.css'
 //import api from '../services/api'
 
 
-
-
 export default class Header extends Component{
     constructor(props) {
         super(props);
@@ -21,15 +19,12 @@ export default class Header extends Component{
       handleChange(event) {
         this.setState({value: event.target.value});
       }
-    
-
-
 
       handleSubmit = async e => {
         e.preventDefault()
         
         //api.get(`/pesquisa/${this.state.value}`)
-        window.location.href = `/pesquisa/${this.state.value}`
+        window.location.href = `/videos/${this.state.value}`
     }
     
 
