@@ -1,0 +1,78 @@
+section#lista-video{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 30px;
+/*
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center; */
+}
+
+section#lista-video article{
+   /* width: 50%;
+    height: 550px; */
+    background: #FFF;
+    border: 1px solid #DDD;
+    margin-top: 30px;
+
+    
+   
+    
+}
+
+section#lista-video article header{
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section#lista-video article header .video-info{
+    display: flex;
+    flex-direction: column;
+}
+
+section#lista-video article header .video-info span{
+    font-size: 20px;
+}
+
+section#lista-video article > video {
+    width: 100%;
+}
+
+section#lista-video article footer {
+    padding: 20px;
+}
+
+section#lista-video article footer .acoes{
+    margin-bottom: 10px;
+}
+
+section#lista-video article footer .acoes button{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    
+}
+
+section#lista-video article footer .acoes img{
+    height: 30px;
+    margin-right: 50px;
+    
+}
+
+section#lista-video article footer p{
+    font-size: 20px;
+    margin-top: 1px;
+    padding: 5px;
+    line-height: 18px;
+}
+
+section#lista-video article footer p span{
+    color: #7159c1;
+    display: block;
+}

@@ -15,6 +15,9 @@ header{
     align-items: center;
     
 }
+nav header div span #play{
+    margin-left: 10em;
+}
 
 nav header div .img2{
     margin-left: 3em;
@@ -22,9 +25,13 @@ nav header div .img2{
 }
 
 nav header div form{
-    margin-left: 40em;
+    margin-left: 30em;
 }
 
+
+nav header div form button{
+    width: 5em;
+}
 
 
 

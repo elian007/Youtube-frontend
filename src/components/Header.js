@@ -44,7 +44,9 @@ export default class Header extends Component{
                         <Link to='/upload'>
                             <span><img src={upload} className='img2' alt='Uplaod de vídeos'/></span>
                         </Link>
-
+                        <Link to='/playlist'>
+                            <span id='play'>Playlist</span>
+                        </Link>
                         <form className="form-inline my-2 my-lg-0" onSubmit={this.handleSubmit}>
                             <input className="form-control mr-sm-2" type="search" 
                                 placeholder="Search" aria-label="Search" value={this.state.value}

@@ -6,6 +6,7 @@ import './Listagem.css'
 
 import like from '../assets/like.svg'
 import deslike from '../assets/deslike.svg'
+import Favorito from './../components/Favorito'
 
 
 class Listagem extends Component{
@@ -44,6 +45,7 @@ class Listagem extends Component{
                 )
             })
         })
+
     }
 
     handleCurtida = id => {
@@ -66,8 +68,9 @@ class Listagem extends Component{
                                     {film.titulo}
                                 </span>
                             </strong>
+                           
                         </div>
-
+                        <Favorito />
                     </header>
                     
                     <video width="" height="400" controls>
@@ -98,6 +101,7 @@ class Listagem extends Component{
                             {film.descurtidas} não gostei
                         </strong>
                             
+                       
                     </footer>
                 </article>
                 ))}
