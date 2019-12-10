@@ -77,5 +77,12 @@ section#lista-video article footer p span{
     display: block;
 }
 
+section#lista-video article header #favorito button img{
+    width: 2em;
+    border: none;
+    background: none;
+    
+}
+
 
 

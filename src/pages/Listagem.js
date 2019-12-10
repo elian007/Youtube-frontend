@@ -4,11 +4,15 @@ import api from '../services/api'
 import './Listagem.css'
 import like from '../assets/like.svg'
 import deslike from '../assets/deslike.svg'
-import Favorito from './../components/Favorito'
+//import Favorito from './../components/Favorito'
+import star_true from './../assets/star_true.svg'
+import star_false from './../assets/star_false.svg'
+
 
 class Listagem extends Component{
     state = {
         listaVideos: [],
+        favorito: false
     }
 
     async componentDidMount() {
@@ -44,6 +48,16 @@ class Listagem extends Component{
         api.post(`/videos/${id}/descurtida`)
     }
 
+      handleChange() {
+          if(this.state.favorito === false){
+                return this.setState({favorito: true});
+          }
+          else{
+            return this.setState({favorito: false})
+          }
+      }
+
+
     render(){
        
         return(
@@ -59,7 +73,13 @@ class Listagem extends Component{
                             </strong>
                            
                         </div>
-                        <Favorito />
+
+                        <div id='favorito'>
+                             <button type='button' onClick={() => this.handleChange()}>
+                                <img src= {this.state.favorito ? star_true : star_false} alt='Adc playlist' />
+                            </button>
+                         </div>
+
                     </header>
                     
                     <video width="" height="400" controls>
