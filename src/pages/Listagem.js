@@ -1,35 +1,27 @@
 import React, { Component } from 'react'
 import io from 'socket.io-client'
 import api from '../services/api'
-
 import './Listagem.css'
-
 import like from '../assets/like.svg'
 import deslike from '../assets/deslike.svg'
 import Favorito from './../components/Favorito'
 
-
 class Listagem extends Component{
-
     state = {
         listaVideos: [],
     }
 
     async componentDidMount() {
         this.registerToSocket()
-
         const response = await api.get('videos')
-
         this.setState({ listaVideos: response.data})
     }
     
     registerToSocket = () => {
         const socket = io(process.env.REACT_APP_API_URL)
-
         socket.on('video', novoVideo => {
             this.setState({ listaVideos: [novoVideo, ...this.state.listaVideos]})
         })
-
         socket.on('curtida', novaCurtida => {
             this.setState({ 
                 listaVideos: this.state.listaVideos.map(film =>
@@ -37,7 +29,6 @@ class Listagem extends Component{
                 )
             })
         })
-
         socket.on('descurtida', novaDescurtida => {
             this.setState({ 
                 listaVideos: this.state.listaVideos.map(film =>
@@ -45,9 +36,7 @@ class Listagem extends Component{
                 )
             })
         })
-
     }
-
     handleCurtida = id => {
         api.post(`/videos/${id}/curtida`)
     }
